@@ -9,6 +9,17 @@ import './Application.css';
 class Application extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      currentUser: null
+    }
+  }
+  componentDidMount () {
+    auth.onAuthStateChange((currentUser) => {
+      console.log('Auth changed to', currentUser);
+      this.setState({
+        currentUser
+      })
+    })
   }
 
   render() {
