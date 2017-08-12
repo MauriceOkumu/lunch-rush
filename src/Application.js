@@ -14,7 +14,7 @@ class Application extends Component {
     }
   }
   componentDidMount () {
-    auth.onAuthStateChange((currentUser) => {
+    auth.onAuthStateChanged((currentUser) => {
       console.log('Auth changed to', currentUser);
       this.setState({
         currentUser
@@ -23,13 +23,21 @@ class Application extends Component {
   }
 
   render() {
+    const { currentUser } = this.state;
     return (
       <div className="Application">
         <header className="Application--header">
           <h1>Lunch Rush</h1>
         </header>
         <div>
-          <SignIn />
+          {!currentUser && <SignIn />}
+          {
+            currentUser &&
+            <div> 
+            <NewRestaurant />
+            <CurrentUser user={currentUser} />
+            </div>
+          }
         </div>
       </div>
     );
