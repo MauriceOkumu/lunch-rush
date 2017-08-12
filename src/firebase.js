@@ -1,12 +1,12 @@
 import firebase from 'firebase';
-
-const config = {
-  apiKey: '',
-  authDomain: '',
-  databaseURL: '',
-  storageBucket: '',
-  messagingSenderId: ''
-};
+  var config = {
+    apiKey: "AIzaSyCXkOlIcOZOzQQtPsuYANoUpm6sOITyh5A",
+    authDomain: "lunch-97688.firebaseapp.com",
+    databaseURL: "https://lunch-97688.firebaseio.com",
+    projectId: "lunch-97688",
+    storageBucket: "lunch-97688.appspot.com",
+    messagingSenderId: "4132059133"
+  };
 
 firebase.initializeApp(config);
 

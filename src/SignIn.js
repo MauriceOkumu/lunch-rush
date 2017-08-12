@@ -5,6 +5,7 @@ class SignIn extends Component {
   render() {
     return (
       <div className="SignIn">
+      <button>Sign in </button>
       </div>
     );
   }
