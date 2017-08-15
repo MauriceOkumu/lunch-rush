@@ -37,7 +37,7 @@ class Restaurants extends Component {
           return <Restaurant 
                     key={key} 
                     {...restaurant}
-                    user={ user }
+                    user={user}
                     handleSelect={() => this.handleSelect(key)}
                     handleDeselect={() => this.handleDeselect(key)}
                   />
